@@ -12,17 +12,25 @@ const workSchema = new Schema({
         default: ''
     },
     startDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     endDate: {
-        type: Date,
+        type: String,
+        required: true,
+    },
+    startTime: {
+        type: String,
+        required: true,
+    },
+    endTime: {
+        type: String,
         required: true,
     },
     workStatus: {
         type: String,
-        enum:['Not-Started', 'In-Progress', 'Done', 'Cancel'],
-        default:'Not-Started'
+        enum:[, 'In-Progress', 'Done', 'Cancel'],
+        default:'In-Progress'
     }
 },{timestamps:true,});
 
